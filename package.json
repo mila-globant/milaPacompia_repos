@@ -1,0 +1,32 @@
+{
+  "name": "milaPacompia_repos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "server": "npx webpack --watch",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Mila Pacompia Machaca",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.20.0",
+    "express": "4.18.1",
+    "tsyringe": "4.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.13",
+    "@types/jest": "28.1.4",
+    "@types/node": "18.0.3",
+    "jest": "28.1.2",
+    "nodemon-webpack-plugin": "4.8.0",
+    "reflect-metadata": "0.1.13",
+    "ts-jest": "28.0.5",
+    "ts-loader": "9.3.1",
+    "typescript": "4.7.4",
+    "webpack": "5.73.0",
+    "webpack-cli": "4.10.0"
+  }
+}
