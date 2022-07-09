@@ -6,7 +6,7 @@
 4. CSV metrics
 
 ## Commands
-For init the server
+To init the server
 ```
 npm run-script server
-```◊
+```
