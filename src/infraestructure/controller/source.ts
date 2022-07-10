@@ -1,8 +1,8 @@
 import { container } from 'tsyringe'
 import { IOrganizationInteractor } from '../../core/interactors/organization'
 import { IRepositoryInteractor } from '../../core/interactors/repository'
-import { OrganizationInteractorMock } from '../source/mock/organization/source'
+import { OrganizationInteractorDatabase } from '../source/database/organization'
 import { RepositoryInteractorMock } from '../source/mock/repository/source'
 
 container.register<IRepositoryInteractor>('RepositoryInteractor', RepositoryInteractorMock)
-container.register<IOrganizationInteractor>('OrganizationInteractor', OrganizationInteractorMock)
+container.register<IOrganizationInteractor>('OrganizationInteractor', OrganizationInteractorDatabase)
