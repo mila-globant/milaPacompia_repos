@@ -27,7 +27,10 @@ export class OrganizationInteractorDatabase implements IOrganizationInteractor {
     return response as IOrganizationDTO[]
   }
 
-  update: (data: IOrganizationDTO) => Promise<IOrganizationDTO>
+  async update (data: IOrganizationDTO): Promise<IOrganizationDTO> {
+    await OrganizationInteractorDatabase.repository.update(data.id, { name: data.name, status: data.status })
+    return await this.getById(data.id)
+  }
 
   delete: (id: number) => Promise<boolean>
 }
