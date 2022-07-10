@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BaseEntity, OneToMany } from 'typeorm';
+import { Tribe } from './tribe';
 
 @Entity()
 export class Organization extends BaseEntity {
@@ -10,4 +11,7 @@ export class Organization extends BaseEntity {
 
   @Column()
   status: number;
+
+  @OneToMany(() => Tribe, tribe => tribe.idOrganization)
+  tribes: Tribe[];
 }
