@@ -32,5 +32,8 @@ export class OrganizationInteractorDatabase implements IOrganizationInteractor {
     return await this.getById(data.id)
   }
 
-  delete: (id: number) => Promise<boolean>
+  async delete (id: number): Promise<boolean> {
+    const response = await OrganizationInteractorDatabase.repository.delete(id)
+    return response.affected === 1
+  }
 }
