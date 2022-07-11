@@ -24,13 +24,15 @@ router.get('/', async (req: Request<{}, {}, {}, QueryParams>, res: Response) => 
   } catch {
     res.status(404).send({ message: 'La Tribu no se encuentra registrada' })
   }
-  const data =  await useCase.execute(id)
-  if (data.length === 0) {
-    res.status(400).send({ message: 'La Tribu no tiene repositorios que cumplan con la cobertura necesaria' })
-  }
-  res.send({
-    repositories: data
-  })
+  try {
+    const data =  await useCase.execute(id)
+    if (data.length === 0) {
+      res.status(400).send({ message: 'La Tribu no tiene repositorios que cumplan con la cobertura necesaria' })
+    }
+    res.send({
+      repositories: data
+    })
+  } catch {}
 });
 
 export default router
