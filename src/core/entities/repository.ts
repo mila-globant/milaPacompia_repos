@@ -19,7 +19,7 @@ export class Repository extends BaseEntity {
   @Column({ length: 1 })
   status: string;
 
-  @ManyToOne(() => Tribe, tribe => tribe.repositories)
+  @ManyToOne(() => Tribe, tribe => tribe.repositories, { eager: true })
   idTribe: Tribe;
 
   @OneToOne(() => Metrics)

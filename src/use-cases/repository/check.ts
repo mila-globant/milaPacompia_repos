@@ -1,5 +1,5 @@
 import { injectable, inject } from 'tsyringe'
-import { IRepositoryDTO, IRepositoryInteractor } from '../../core/interactors/repository'
+import { IRepositoryCodesDTO, IRepositoryInteractor } from '../../core/interactors/repository'
 
 @injectable()
 export class RepositoryCheck {
@@ -7,7 +7,7 @@ export class RepositoryCheck {
     @inject('RepositoryInteractor') private readonly repositoryInteractor: IRepositoryInteractor
   ) {}
 
-  public async execute (): Promise<IRepositoryDTO[]> {
+  public async execute (): Promise<IRepositoryCodesDTO[]> {
     return this.repositoryInteractor.check()
   }
 }

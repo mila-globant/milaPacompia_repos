@@ -13,7 +13,7 @@ export class Tribe extends BaseEntity {
   @Column()
   status: number;
 
-  @ManyToOne(() => Organization, organization => organization.tribes)
+  @ManyToOne(() => Organization, organization => organization.tribes, { eager: true })
   idOrganization: Organization;
 
   @OneToMany(() => Repository, repository => repository.idTribe)
