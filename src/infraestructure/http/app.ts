@@ -2,11 +2,12 @@ import express from 'express'
 import * as bodyParser from 'body-parser'
 import router from '../routes'
 import { AppDataSource } from '../source/database/data-source'
-
+import { populateData } from '../source/database/init'
 
 async function main() {
-  await AppDataSource.initialize().then(() => {
+  await AppDataSource.initialize().then(async () => {
     console.log('Data Source has been initialized!')
+    await populateData()
   })
   .catch((err) => {
     console.error('Error during Data Source initialization:', err)

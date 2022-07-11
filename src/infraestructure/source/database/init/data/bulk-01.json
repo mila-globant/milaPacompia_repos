@@ -1,0 +1,76 @@
+{
+  "organization": {
+    "name": "Organization 20",
+    "status": 604
+  },
+  "tribe": {
+    "id": 1,
+    "name": "Tribe 1",
+    "status": 0
+  },
+  "metrics": [
+    {
+      "idRepository": 1,
+      "coverage": 76,
+      "bugs": 0,
+      "vulnerabilities": 0,
+      "hotspot": 0,
+      "codeSmells": 0
+    },
+    {
+      "idRepository": 2,
+      "coverage": 50,
+      "bugs": 0,
+      "vulnerabilities": 0,
+      "hotspot": 0,
+      "codeSmells": 0
+    },
+    {
+      "idRepository": 3,
+      "coverage": 80,
+      "bugs": 0,
+      "vulnerabilities": 0,
+      "hotspot": 0,
+      "codeSmells": 0
+    },
+    {
+      "idRepository": 4,
+      "coverage": 90,
+      "bugs": 0,
+      "vulnerabilities": 0,
+      "hotspot": 0,
+      "codeSmells": 0
+    }
+  ],
+  "repositories": [
+    {
+      "id": 1,
+      "name": "repo-backend-1",
+      "state": "E",
+      "status": "A",
+      "create_time": "2022-01-01 20:00:00"
+    },
+    {
+      "id": 2,
+      "name": "repo-backend-2",
+      "state": "E",
+      "status": "A",
+      "create_time": "2022-01-01 20:00:00"
+    },
+    {
+      "id": 3,
+      "name": "repo-backend-3",
+      "state": "E",
+      "status": "A",
+      "create_time": "2020-01-01 20:00:00"
+    },
+    {
+      "id": 4,
+      "name": "repo-backend-4",
+      "state": "D",
+      "status": "A",
+      "create_time": "2022-01-01 20:00:00"
+    }
+  ]
+
+}

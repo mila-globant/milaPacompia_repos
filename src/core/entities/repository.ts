@@ -1,10 +1,10 @@
-import { Entity, Column, PrimaryGeneratedColumn, BaseEntity, ManyToOne, OneToOne, JoinColumn } from 'typeorm';
+import { Entity, Column, PrimaryColumn, BaseEntity, ManyToOne, OneToOne, JoinColumn } from 'typeorm';
 import { Metrics } from './metrics';
 import { Tribe } from './tribe';
 
 @Entity()
 export class Repository extends BaseEntity {
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn()
   id: number;
 
   @Column()

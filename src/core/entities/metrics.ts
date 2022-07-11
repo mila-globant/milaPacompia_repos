@@ -1,22 +1,22 @@
-import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
 
 @Entity()
 export class Metrics extends BaseEntity {
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn()
   idRepository: number;
 
   @Column({ type: 'float' })
-  coverage: string;
+  coverage: number;
 
   @Column({ type: 'int' })
-  bugs: string;
+  bugs: number;
 
   @Column({ type: 'int' })
-  vulnerabilities: string;
+  vulnerabilities: number;
 
   @Column({ type: 'int' })
-  hotspot: string;
+  hotspot: number;
 
   @Column({ type: 'int' })
-  codeSmells: string;
+  codeSmells: number;
 }
