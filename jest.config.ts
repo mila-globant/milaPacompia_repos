@@ -1,4 +1,3 @@
-// import 'reflect-metadata'
 import type { Config } from '@jest/types'
 const { defaults } = require('jest-config')
 
