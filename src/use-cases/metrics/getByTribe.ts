@@ -47,21 +47,20 @@ export class MetricsGetByTribe {
       }
     })
     const withRepos = await Promise.all(withReposPromises)
-
     /* Get tribe data */
     const withTribePromises = withRepos.map(async (item) => {
       const tribe = await this.tribeInteractor.getById(item.tribe)
       return {
         ...item,
         tribe: tribe.name,
-        organization: tribe
+        organization: tribe.idOrganization
       }
     })
     const withTribe = await Promise.all(withTribePromises)
 
     /* Get organization data */
     const withOrganizationPromises = withTribe.map(async (item) => {
-      const organization = await this.organizationInteractor.getById(item.organization.id)
+      const organization = await this.organizationInteractor.getById(item.organization)
       return {
         ...item,
         organization: organization.name
